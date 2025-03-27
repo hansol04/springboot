@@ -40,9 +40,10 @@ public class BoardController {
 	@RequestMapping("/list")
 	public String listPage(Model model) {
 		List<Board> list = boardService.list();
-		// int record = boardService.totalRecord();
+		int record = boardService.totalRecord();
+		
 		model.addAttribute("list", list);
-		model.addAttribute("totalRecord", boardService.totalRecord());
+		model.addAttribute("totalRecord", record);
 		return "list";
 	}
 	
@@ -122,10 +123,14 @@ public class BoardController {
 	
 	@PostMapping("/write")
 	public String write(Board b) {
-		System.out.println("title : " + b.getTitle());
-		System.out.println("writer : " + b.getWriter());
-		System.out.println("content : " + b.getContent());
-		
+		boardService.insertBoard(b);
+		return "redirect:list";
+	}
+	
+	@GetMapping("/delete")
+	public String delete(HttpServletRequest request, Model model) {
+		String bno = request.getParameter("boardno");
+		boardService.deleteBoard(bno);
 		return "redirect:list";
 	}
 }

@@ -31,13 +31,13 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public int insertBoard(Board b) {
-		return 0;
+		return boardDao.insertBoard(b);
 	}
 
 	
 	@Override
-	public int deleteBoard(int boardno) {
-		return 0;
+	public int deleteBoard(String boardno) {
+		return boardDao.deleteBoard(boardno);
 	}
 
 }
