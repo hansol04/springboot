@@ -1,10 +1,10 @@
 a {
-    text-decoration:none;
+    text-decoration: none;
     color: black;
 }
 .nav-area {
     width: 100%;
-    background-color: darkgray;
+    background-color: rgb(55, 55, 55);
     text-align: center;
     color: white;
     height: 45px;
@@ -13,6 +13,17 @@ a {
 	width: 25%;
 }
 .nav-area td:hover {
-	background-color: darkolivegreen;
+	background-color: rgb(128, 128, 128);
 	cursor: pointer;
+}
+.imgwrap {
+	text-align: center;
+	margin-top: 10%;
+}
+.imgwrap img{
+	width: 400px;
+}
+.outer {
+	width: 700px;
+	margin: 0 auto;
 }

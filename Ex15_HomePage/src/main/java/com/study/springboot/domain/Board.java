@@ -17,10 +17,11 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 @Data
-@NoArgsConstructor // 빈생성자
+@NoArgsConstructor
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 public class Board {
+
 	@Id
 	@SequenceGenerator (
 			name = "myBoardSEQ",
@@ -50,17 +51,3 @@ public class Board {
 	@Column(name="update_date")
 	private LocalDateTime updateDate;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
