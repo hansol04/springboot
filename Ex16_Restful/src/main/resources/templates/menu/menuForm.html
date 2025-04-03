@@ -250,7 +250,7 @@
 				
 				$('#menuUpdateFrm').on('submit', e => {
 					e.preventDefault();
-					const frmData = new FormDate(e.target);
+					const frmData = new FormData(e.target);
 					const menu = {};
 					frmData.forEach((value, key) => {
 						menu[key] = value;
