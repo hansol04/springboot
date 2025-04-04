@@ -41,7 +41,10 @@ public class MenuService {
 		return menuRepository.save(menu);
 	}
 
-
+	public void deleteMenu(Long id) {
+		menuRepository.deleteById(id);
+	}
+	
 }
 
 
